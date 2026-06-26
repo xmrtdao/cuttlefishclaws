@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { AGENTS } from '../../lib/mockData'
+import graphData from '../../lib/trustGraphData.json'
 
 // ── TYPES ────────────────────────────────────────────────────────────
 interface TGNode {
@@ -80,10 +80,10 @@ function scoreLabel(s: number): string {
 }
 
 function getSectorValues(n: TGNode, edgeCount: number) {
-  const a = AGENTS.find(ag => ag.id === n.id)
+  const gn = graphData.nodes.find(gn => gn.id === n.id)
   return [
     n.score / 100,
-    a ? a.files.filter(f => f.status === 'active' || f.status === 'live').length / Math.max(a.files.length, 1) : 0.5,
+    gn && gn.files ? gn.files.length / Math.max(gn.files.length, 1) : 0.5,
     n.type === 'governance' ? 0.85 : n.type === 'investor' ? 0.65 : 0.75,
     Math.min(1, edgeCount / 10),
   ]
@@ -117,26 +117,32 @@ function initTrustGraph(
 
   function initNodes() {
     const cx = W / 2, cy = H / 2
-    nodes = AGENTS.map((a, i) => {
-      const angle = (i / AGENTS.length) * Math.PI * 2
+
+    // Named nodes from real graph data (governance, investor, system types)
+    const namedGraphNodes = graphData.nodes.filter(n =>
+      n.type === 'governance' || n.type === 'investor' || n.type === 'system'
+    )
+    nodes = namedGraphNodes.map((gn, i) => {
+      const angle = (i / namedGraphNodes.length) * Math.PI * 2
       const r = Math.min(W, H) * 0.28
       return {
-        id: a.id,
-        label: a.name,
-        score: a.trustScore ?? 65,
-        targetScore: a.trustScore ?? 65,
-        type: a.type,
-        color: NODE_COLOR[a.type] || '#ffbb33',
+        id: gn.id,
+        label: gn.label,
+        score: gn.trustScore ?? 50,
+        targetScore: gn.trustScore ?? 50,
+        type: gn.type as 'governance' | 'investor' | 'system' | 'unknown',
+        color: NODE_COLOR[gn.type] || '#ffbb33',
         x: cx + Math.cos(angle) * r + (Math.random() - 0.5) * 40,
         y: cy + Math.sin(angle) * r + (Math.random() - 0.5) * 40,
         vx: 0, vy: 0,
-        r: 18 + (a.trustScore ?? 65) * 0.12,
+        r: 18 + (gn.trustScore ?? 50) * 0.12,
         pulsePhase: Math.random() * Math.PI * 2,
         lastEvent: '',
         eventAlpha: 0,
       }
     })
 
+    // Background unknown nodes for visual density
     for (let i = 0; i < 18; i++) {
       const angle = Math.random() * Math.PI * 2
       const r = Math.min(W, H) * (0.12 + Math.random() * 0.38)
@@ -156,15 +162,24 @@ function initTrustGraph(
       })
     }
 
+    // Build edges from real graph data
+    const nodeMap = new Map(nodes.map(n => [n.id, n]))
     edges = []
-    const named = nodes.slice(0, AGENTS.length)
-    named.forEach((a, i) => {
-      named.forEach((b, j) => {
-        if (j > i && Math.random() > 0.3) {
-          edges.push({ a, b, strength: 0.3 + Math.random() * 0.7, flowPhase: Math.random() * Math.PI * 2 })
-        }
-      })
-      nodes.slice(AGENTS.length).filter(() => Math.random() > 0.65).forEach(u => {
+    const usedPairs = new Set<string>()
+    graphData.edges.forEach(ge => {
+      const a = nodeMap.get(ge.source)
+      const b = nodeMap.get(ge.target)
+      if (!a || !b) return
+      const key = [a.id, b.id].sort().join('::')
+      if (usedPairs.has(key)) return
+      usedPairs.add(key)
+      edges.push({ a, b, strength: ge.strength, flowPhase: Math.random() * Math.PI * 2 })
+    })
+
+    // Also connect named nodes to unknown background nodes for visual richness
+    const named = nodes.slice(0, namedGraphNodes.length)
+    named.forEach(a => {
+      nodes.slice(namedGraphNodes.length).filter(() => Math.random() > 0.65).forEach(u => {
         edges.push({ a, b: u, strength: 0.15 + Math.random() * 0.3, flowPhase: Math.random() * Math.PI * 2 })
       })
     })
@@ -443,8 +458,14 @@ export default function TrustGraphSection() {
   const [events, setEvents] = useState<ScoreEvent[]>([])
   const [selectedAgent, setSelectedAgent] = useState<string | null>(null)
   const [clickedNode, setClickedNode] = useState<{ id: string; xFrac: number; yFrac: number } | null>(null)
+
+  // Named nodes from real graph data (governance, investor, system types)
+  const namedGraphNodes = graphData.nodes.filter(n =>
+    n.type === 'governance' || n.type === 'investor' || n.type === 'system'
+  )
+
   const [agentScores, setAgentScores] = useState<Record<string, number>>(() =>
-    Object.fromEntries(AGENTS.map(a => [a.id, a.trustScore ?? 65]))
+    Object.fromEntries(namedGraphNodes.map(n => [n.id, n.trustScore ?? 50]))
   )
 
   const handleNodeClick = useCallback((nodeId: string | null, xFrac: number, yFrac: number) => {
@@ -460,22 +481,22 @@ export default function TrustGraphSection() {
   // Auto-fire random events
   useEffect(() => {
     const interval = setInterval(() => {
-      const agent = AGENTS[Math.floor(Math.random() * AGENTS.length)]
+      const agent = namedGraphNodes[Math.floor(Math.random() * namedGraphNodes.length)]
       const event = SCORE_EVENTS[Math.floor(Math.random() * SCORE_EVENTS.length)]
       engineRef.current?.applyEvent(agent.id, event.delta, event.label)
       setAgentScores(prev => ({
         ...prev,
-        [agent.id]: Math.max(0, Math.min(100, (prev[agent.id] ?? 65) + event.delta))
+        [agent.id]: Math.max(0, Math.min(100, (prev[agent.id] ?? 50) + event.delta))
       }))
       setEvents(prev => [{
         nodeId: agent.id,
-        label: `${agent.name}: ${event.label}`,
+        label: `${agent.label}: ${event.label}`,
         delta: event.delta,
         ts: Date.now(),
       }, ...prev.slice(0, 7)])
     }, 2200)
     return () => clearInterval(interval)
-  }, [])
+  }, [namedGraphNodes])
 
   useEffect(() => {
     if (!canvasRef.current) return
@@ -487,28 +508,28 @@ export default function TrustGraphSection() {
     engineRef.current?.applyEvent(agentId, delta, label)
     setAgentScores(prev => ({
       ...prev,
-      [agentId]: Math.max(0, Math.min(100, (prev[agentId] ?? 65) + delta))
+      [agentId]: Math.max(0, Math.min(100, (prev[agentId] ?? 50) + delta))
     }))
     setEvents(prev => [{
       nodeId: agentId,
-      label: `${AGENTS.find(a => a.id === agentId)?.name}: ${label}`,
+      label: `${namedGraphNodes.find(n => n.id === agentId)?.label ?? agentId}: ${label}`,
       delta,
       ts: Date.now(),
     }, ...prev.slice(0, 7)])
-  }, [])
+  }, [namedGraphNodes])
 
-  const selected = AGENTS.find(a => a.id === selectedAgent)
-  const selectedScore = selectedAgent ? (agentScores[selectedAgent] ?? 65) : null
+  const selected = namedGraphNodes.find(n => n.id === selectedAgent)
+  const selectedScore = selectedAgent ? (agentScores[selectedAgent] ?? 50) : null
 
   // Build overlay data for clicked node
-  const clickedAgent = clickedNode ? AGENTS.find(a => a.id === clickedNode.id) : null
-  const clickedScore = clickedNode ? (agentScores[clickedNode.id] ?? 65) : 0
+  const clickedGraphNode = clickedNode ? namedGraphNodes.find(n => n.id === clickedNode.id) : null
+  const clickedScore = clickedNode ? (agentScores[clickedNode.id] ?? 50) : 0
   const clickedSc = scoreColor(clickedScore)
-  const clickedSectorVals = clickedAgent
+  const clickedSectorVals = clickedGraphNode
     ? [
         clickedScore / 100,
-        clickedAgent.files.filter(f => f.status === 'active' || f.status === 'live').length / Math.max(clickedAgent.files.length, 1),
-        clickedAgent.type === 'governance' ? 0.85 : clickedAgent.type === 'investor' ? 0.65 : 0.75,
+        clickedGraphNode.files ? clickedGraphNode.files.length / Math.max(clickedGraphNode.files.length, 1) : 0.5,
+        clickedGraphNode.type === 'governance' ? 0.85 : clickedGraphNode.type === 'investor' ? 0.65 : 0.75,
         0.6, // placeholder for link density
       ]
     : []
@@ -526,14 +547,14 @@ export default function TrustGraphSection() {
           </p>
         </div>
 
-        <div className="reveal grid gap-[1px]" style={{ gridTemplateColumns: '1fr 320px', background: 'var(--border)' }}>
+        <div className="reveal grid grid-cols-1 md:grid-cols-[1fr_320px] gap-[1px]" style={{ background: 'var(--border)' }}>
 
           {/* Canvas */}
-          <div className="relative" style={{ background: 'var(--bg0)', height: 480 }}>
+          <div className="relative" style={{ background: 'var(--bg0)', height: 'clamp(320px, 50vw, 480px)' }}>
             <canvas ref={canvasRef} className="block w-full h-full" />
 
             {/* Click-node overlay panel */}
-            {clickedNode && clickedAgent && (
+            {clickedNode && clickedGraphNode && (
               <div
                 className="absolute z-10 pointer-events-none"
                 style={{
@@ -555,17 +576,17 @@ export default function TrustGraphSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-display text-[13px] font-semibold" style={{ color: clickedSc }}>
-                        {clickedAgent.name}
+                        {clickedGraphNode.label}
                       </div>
                       <div className="text-[7px] tracking-[0.1em] uppercase" style={{ color: 'rgba(255,160,0,0.45)' }}>
-                        {clickedAgent.type}
+                        {clickedGraphNode.type}
                       </div>
                     </div>
                     <div className="flex items-center gap-1">
                       <div className="w-1.5 h-1.5 rounded-full"
-                        style={{ background: clickedAgent.status === 'online' ? '#44ffaa' : clickedAgent.status === 'standby' ? '#ffaa00' : '#aa88ff' }} />
+                        style={{ background: clickedGraphNode.type === 'governance' ? '#44ffaa' : clickedGraphNode.type === 'investor' ? '#ffaa00' : '#aa88ff' }} />
                       <span className="text-[7px] tracking-[0.08em] uppercase" style={{ color: 'rgba(255,160,0,0.4)' }}>
-                        {clickedAgent.status}
+                        {clickedGraphNode.type}
                       </span>
                     </div>
                   </div>
@@ -601,7 +622,7 @@ export default function TrustGraphSection() {
 
                   {/* Files */}
                   <div className="flex flex-wrap gap-1 pt-1" style={{ borderTop: '0.5px solid rgba(255,140,0,0.12)' }}>
-                    {clickedAgent.files.slice(0, 3).map((f, i) => (
+                    {clickedGraphNode.files && clickedGraphNode.files.slice(0, 3).map((f, i) => (
                       <span key={i} className="text-[6.5px] tracking-[0.06em] px-1 py-0.5"
                         style={{ border: '0.5px solid rgba(255,140,0,0.2)', color: 'rgba(255,160,0,0.5)' }}>
                         {f.name}
@@ -610,7 +631,7 @@ export default function TrustGraphSection() {
                   </div>
 
                   <div className="text-[6px] tracking-[0.08em]" style={{ color: 'rgba(255,160,0,0.3)' }}>
-                    {clickedAgent.version} · click node to dismiss
+                    {clickedGraphNode.type} · click node to dismiss
                   </div>
                 </div>
               </div>
@@ -648,25 +669,25 @@ export default function TrustGraphSection() {
             <div className="p-4 border-b" style={{ borderColor: 'var(--border)' }}>
               <div className="text-[8px] tracking-[0.14em] text-[rgba(255,160,0,0.4)] uppercase mb-3">Agent Scores</div>
               <div className="flex flex-col gap-1">
-                {AGENTS.map(a => {
-                  const score = agentScores[a.id] ?? 65
+                {namedGraphNodes.map(n => {
+                  const score = agentScores[n.id] ?? 50
                   const sc = scoreColor(score)
                   return (
-                    <button key={a.id}
+                    <button key={n.id}
                       onClick={() => {
-                        const newId = selectedAgent === a.id ? null : a.id
+                        const newId = selectedAgent === n.id ? null : n.id
                         setSelectedAgent(newId)
                         engineRef.current?.setSelected(newId)
                         if (!newId) setClickedNode(null)
                       }}
                       className="flex items-center justify-between p-2 text-left transition-all cursor-pointer"
                       style={{
-                        background: selectedAgent === a.id ? `${sc}12` : 'transparent',
-                        border: `0.5px solid ${selectedAgent === a.id ? `${sc}55` : 'transparent'}`,
+                        background: selectedAgent === n.id ? `${sc}12` : 'transparent',
+                        border: `0.5px solid ${selectedAgent === n.id ? `${sc}55` : 'transparent'}`,
                       }}>
                       <div className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full" style={{ background: sc }} />
-                        <span className="text-[9px] tracking-[0.06em]" style={{ color: sc }}>{a.name}</span>
+                        <span className="text-[9px] tracking-[0.06em]" style={{ color: sc }}>{n.label}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="h-1 rounded-full overflow-hidden" style={{ width: 48, background: 'rgba(255,140,0,0.1)' }}>
@@ -684,7 +705,7 @@ export default function TrustGraphSection() {
             {selected && selectedScore !== null && (
               <div className="p-4 border-b" style={{ borderColor: 'var(--border)' }}>
                 <div className="text-[8px] tracking-[0.14em] text-[rgba(255,160,0,0.4)] uppercase mb-2">
-                  Fire Event → {selected.name}
+                  Fire Event → {selected.label}
                 </div>
                 <div className="flex flex-col gap-1">
                   {[
@@ -735,7 +756,7 @@ export default function TrustGraphSection() {
         </div>
 
         {/* Mechanics explainer */}
-        <div className="reveal grid grid-cols-3 gap-[1px] mt-[1px]" style={{ background: 'var(--border)' }}>
+        <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-[1px] mt-[1px]" style={{ background: 'var(--border)' }}>
           {[
             { icon: '⊙', color: 'var(--green)', title: 'Asymmetric Curve', desc: 'Trust is earned slowly through consistent governance participation, code contributions, and security audits. It is lost quickly through violations — by constitutional design.' },
             { icon: '⟡', color: 'var(--cyan)', title: 'Cross-DAO Portable', desc: 'TrustGraph scores follow agents across the network via CACTransferProtocol.sol. Your constitutional reputation is your identity — it travels with your CAC.' },
