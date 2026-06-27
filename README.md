@@ -1,35 +1,64 @@
-# https-github.com-HansElze-cuttlefishclaws
+# DevGruGold — XMRT DAO Monorepo
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Monorepo for the XMRT DAO ecosystem: agent infrastructure, relay services, and the cuttlefishclaws Tributary AI Campus SPA.
 
-## Built with v0
+## Repositories
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+| Repo | Description | Live |
+|------|-------------|------|
+| `xmrtdao/cuttlefishclaws` | Tributary AI Campus — Vite + React SPA | [xmrtdao.github.io/cuttlefishclaws](https://xmrtdao.github.io/cuttlefishclaws/) |
+| `xmrtdao/cashdapp` | CashDapp landing page | [xmrtdao.github.io/cashdapp](https://xmrtdao.github.io/cashdapp/) |
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_X5RXGolu2KC4OpfoSSGLZxkGWtXm)
+## Structure
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+DevGruGold/
+├── cuttlefishclaws/       # Vite + React SPA (subtree — pushed to xmrtdao/cuttlefishclaws)
+│   ├── src/
+│   │   ├── components/    # React components (sections, agents, nav, hero, footer)
+│   │   ├── lib/            # vizEngine.ts, trustGraphData.json, mockData.ts, types.ts
+│   │   ├── pages/          # Route pages (CACPresale, VCPage)
+│   │   └── App.tsx         # Root with React Router
+│   └── dist/               # Production build (deployed to GH Pages)
+├── relay/                  # Express relay server (port 8080)
+│   ├── server.js           # Main relay with API routes, fleet chat, cron
+│   ├── supervisor.mjs      # Service supervisor (pg, local-sb, Vite, tunnel, cron)
+│   ├── tools/              # Utility scripts (send-cuttlefishclaws, etc.)
+│   └── functions/          # Edge function handlers
+├── supabase/               # Local Supabase replacement (local-sb)
+│   ├── routes/             # PostgREST-compatible REST router
+│   └── local-migrations/   # SQL migrations
+├── cloudflare-workers/     # CF Worker scripts (api-gateway, etc.)
+└── _*.mjs / _*.js          # One-off diagnostic and utility scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## cuttlefishclaws SPA
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+See [cuttlefishclaws/README.md](./cuttlefishclaws/README.md) for full details.
 
-## Learn More
+**Quick start:**
+```bash
+cd cuttlefishclaws
+npm install
+npm run dev     # Vite dev server on port 5173
+npm run build   # Production build to dist/
+```
 
-To learn more, take a look at the following resources:
+Deploys to GitHub Pages on push to `master` branch via GH Actions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+## Relay
 
-<a href="https://v0.app/chat/api/kiro/clone/HansElze/https-github.com-HansElze-cuttlefishclaws" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+Express server on port 8080 serving API routes, fleet chat, and proxying to local-sb.
+
+```bash
+cd relay
+npm install
+node server.js
+```
+
+## Branches
+
+- `work-branch` — active development
+- `main` — stable, merged from work-branch
+- `cuttlefish/main` — cuttlefishclaws SPA subtree (pushed to xmrtdao/cuttlefishclaws)
+- `cuttlefish/master` — GH Pages deploy branch (auto-deploys on push)
