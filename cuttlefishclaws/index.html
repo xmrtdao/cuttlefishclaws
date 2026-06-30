@@ -11,6 +11,27 @@
 </head>
 <body>
   <div id="root"></div>
+
+  <!--
+    Netlify Forms — hidden static forms for build-time detection.
+    Netlify scans the built HTML for <form data-netlify="true"> at deploy time.
+    React-rendered forms are invisible to this scanner, so we declare them here.
+    The matching React forms include a hidden <input name="form-name"> that
+    tells Netlify which static form to associate the submission with.
+  -->
+  <form name="cac-presale" data-netlify="true" netlify-honeypot="bot-field" style="display:none">
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="type" />
+    <input type="text" name="referral" />
+  </form>
+  <form name="investor-inquiry" data-netlify="true" netlify-honeypot="bot-field" style="display:none">
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="amount" />
+    <input type="text" name="interest" />
+  </form>
+
   <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

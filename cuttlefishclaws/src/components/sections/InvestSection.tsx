@@ -16,11 +16,20 @@ export default function InvestSection({ scrollTo, onShowReturns }: Props) {
     if (!form.email) return
     setFormState('submitting')
     try {
+      // Primary: relay API
       await fetch('https://relay.mobilemonero.com/api/contact/cuttlefishclaws/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
+      // Secondary: Netlify Forms (form-encoded POST to same page)
+      const netlifyData = new FormData()
+      netlifyData.append('form-name', 'investor-inquiry')
+      netlifyData.append('name', form.name)
+      netlifyData.append('email', form.email)
+      netlifyData.append('amount', form.amount)
+      netlifyData.append('interest', form.interest)
+      fetch('/', { method: 'POST', body: netlifyData }).catch(() => {})
       setFormState('done')
     } catch {
       setFormState('error')
@@ -112,6 +121,7 @@ export default function InvestSection({ scrollTo, onShowReturns }: Props) {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-3">
+              <input type="hidden" name="form-name" value="investor-inquiry" />
               <div className="grid md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[8px] tracking-[0.12em] text-[rgba(255,160,0,0.45)] mb-1">NAME</label>

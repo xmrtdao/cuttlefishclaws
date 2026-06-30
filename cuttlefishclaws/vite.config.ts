@@ -14,6 +14,27 @@ export default defineConfig({
         const dist = path.resolve(__dirname, 'dist')
         fs.copyFileSync(path.join(dist, 'index.html'), path.join(dist, '404.html'))
       }
+    },
+    {
+      name: 'netlify-forms-inject',
+      transformIndexHtml(html) {
+        // Inject hidden static forms for Netlify Forms detection
+        // Netlify scans built HTML for <form data-netlify="true"> at deploy time
+        const forms = `
+  <form name="cac-presale" data-netlify="true" netlify-honeypot="bot-field" style="display:none">
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="type" />
+    <input type="text" name="referral" />
+  </form>
+  <form name="investor-inquiry" data-netlify="true" netlify-honeypot="bot-field" style="display:none">
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="amount" />
+    <input type="text" name="interest" />
+  </form>`
+        return html.replace('</body>', `${forms}\n</body>`)
+      }
     }
   ],
   build: {

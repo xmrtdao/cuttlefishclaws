@@ -28,11 +28,20 @@ export default function CACPresale() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
+      // Primary: relay API
       const res = await fetch('https://relay.mobilemonero.com/api/contact/cuttlefishclaws', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
+      // Secondary: Netlify Forms (form-encoded POST to same page)
+      const netlifyData = new FormData()
+      netlifyData.append('form-name', 'cac-presale')
+      netlifyData.append('name', form.name)
+      netlifyData.append('email', form.email)
+      netlifyData.append('type', form.type)
+      netlifyData.append('referral', form.referral)
+      fetch('/', { method: 'POST', body: netlifyData }).catch(() => {})
       if (res.ok) {
         setSubmitted(true)
       } else {
@@ -217,6 +226,7 @@ export default function CACPresale() {
               onSubmit={handleSubmit}
               className="space-y-4"
             >
+              <input type="hidden" name="form-name" value="cac-presale" />
 
               <div>
                 <label className="text-[8px] tracking-[0.18em] text-[rgba(255,160,0,0.5)] uppercase block mb-1.5">
