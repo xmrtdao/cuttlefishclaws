@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "c6efa1c8ad984b43",
+    "type": "split",
+    "children": [
+      {
+        "id": "01717c53d1a7db18",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "87e1bca03f256eb7",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "xmrt-dao.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "xmrt-dao"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cb708dc0a2df0f0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "623c158c08f587c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4f2b2d493dfbe51",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "63c7479f122aad99",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f684ac8be32db3fb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e06bb7ad11a5d12e",
+    "type": "split",
+    "children": [
+      {
+        "id": "1f32f32ed64f003f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d4d89cd275a2316",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "e2c0c4020482d7f7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "35317357f9ebdf78",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cf56e4e10ec3b85e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "8d9eae137e08e3f1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c4f2b2d493dfbe51",
+  "lastOpenFiles": [
+    "Untitled",
+    "xmrt-dao.canvas",
+    "Untitled.base",
+    "Legislation Tracker.md",
+    "Product Thesis.md",
+    "Two Stack Architecture.md",
+    "Two Stack Architecture.md.e791d4285e11.tmp",
+    "Canonical Reconciliation.md",
+    "Agent.md.209e91d7fb09.tmp",
+    "CACToken.sol.md.87c3015c40fc.tmp",
+    "CAC.md.4a245b1897ba.tmp",
+    "Welcome.md",
+    "CONSTITUTION.md",
+    "CONSTITUTION.md.8c78b76f5969.tmp",
+    "SOUL.md",
+    "TributaryProperty.sol.md",
+    "TributaryProperty.sol.md.1f475182b9af.tmp",
+    "GovernanceModule.sol.md",
+    "GovernanceModule.sol.md.e9d3232908f1.tmp",
+    "FounderShare.sol.md",
+    "CACTransferProtocol.sol.md",
+    "CACTransferProtocol.sol.md.a87c67cb6b9c.tmp",
+    "AgentBillOfRights.sol.md",
+    "AgentBillOfRights.sol.md.df7c2bde0061.tmp",
+    "FeeRouter.sol.md",
+    "CACToken.sol.md",
+    "TrustGraph.sol.md",
+    "Contracts.md",
+    "Sovereign Agent.md",
+    "Builder Agent.md",
+    "GlobalCommunicator.md",
+    "Arch.md",
+    "Trib.md",
+    "DAO Gov.md",
+    "TrustGraph.md",
+    "Agent.md",
+    "CAC.md"
+  ]
+}

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Databases / runtime registry data (never commit)
+*.db
+*.sqlite
+*.sqlite3
+*-shm
+*-wal
+
+# Node / web build
+node_modules/
+dist/
+build/
+
+# Env / secrets
+.env
+.env.*
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

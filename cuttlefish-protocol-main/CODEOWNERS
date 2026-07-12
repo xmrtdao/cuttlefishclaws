@@ -1,0 +1,9 @@
+# Cuttlefish Protocol — code ownership
+# The Navigator owns the entire canon and all services by default.
+# Canonical names and constitutional documents are name-locked; changes require Navigator review.
+
+*                       @HansElze
+
+/canon/                  @HansElze
+/canon/00_CONSTITUTION/  @HansElze
+/canon/CONSTITUTIONAL_ARCHIVE/ @HansElze
