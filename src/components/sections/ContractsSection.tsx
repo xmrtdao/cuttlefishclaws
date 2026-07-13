@@ -1,6 +1,9 @@
 import { CONTRACTS } from '../../lib/mockData'
+import { useContracts } from '../../lib/useLiveData'
 
 export default function ContractsSection() {
+  const { data: liveContracts } = useContracts()
+  const contracts = liveContracts.length > 0 ? liveContracts : CONTRACTS
   return (
     <section id="contracts" className="px-8 py-20">
       <div className="max-w-[1200px] mx-auto">
@@ -36,7 +39,7 @@ export default function ContractsSection() {
               </tr>
             </thead>
             <tbody>
-              {CONTRACTS.map((contract, i) => (
+              {contracts.map((contract, i) => (
                 <tr 
                   key={i}
                   className="border-b border-[var(--border)] hover:bg-[rgba(255,140,0,0.03)] transition-colors"

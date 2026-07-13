@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { STACK_LAYERS } from '../../lib/mockData'
+import { useCapitalStack } from '../../lib/useLiveData'
 
 // ── CAPITAL STACK NODE DATA ───────────────────────────────────────────
 interface CSNode {

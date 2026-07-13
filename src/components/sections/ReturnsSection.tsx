@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { SCENARIOS } from '../../lib/mockData'
+import { useScenarios } from '../../lib/useLiveData'
 
 interface Props {
   unlocked: boolean
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export default function ReturnsSection({ unlocked, onUnlock, onLock }: Props) {
+  const { data: liveScenarios } = useScenarios()
+  const scenarios = liveScenarios.length > 0 ? liveScenarios : SCENARIOS
   const [code, setCode] = useState('')
   const [error, setError] = useState(false)
 
@@ -107,7 +110,7 @@ export default function ReturnsSection({ unlocked, onUnlock, onLock }: Props) {
         </div>
 
         <div className="grid gap-[1px] mb-[1px] grid-cols-1 md:grid-cols-3" style={{ background: 'var(--border)' }}>
-          {SCENARIOS.map((scenario, i) => (
+          {scenarios.map((scenario, i) => (
             <div key={scenario.name} className="p-8" style={{
               background: scenario.featured ? 'rgba(255,140,0,0.04)' : 'var(--bg1)',
               borderTop: scenario.featured ? '1.5px solid var(--amber2)' : undefined,

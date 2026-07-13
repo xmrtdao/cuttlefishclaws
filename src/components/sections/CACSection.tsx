@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { CAC_TIERS } from '../../lib/mockData'
+import { useCACTiers } from '../../lib/useLiveData'
 import ScrollTrustGraph from './ScrollTrustGraph'
 
 const CHAIN_INFO: Record<string, { color: string; label: string; sublabel: string; frequency: string; contracts: string[]; detail: string; deferred?: boolean }> = {
@@ -190,6 +190,8 @@ export default function CACSection() {
   const [expandedPillar, setExpandedPillar] = useState<number | null>(null)
   const [expandedGuarantee, setExpandedGuarantee] = useState<number | null>(null)
 
+  const { data: tiers } = useCACTiers()
+  const CAC_TIERS = tiers
   const tier = CAC_TIERS[activeTier]
 
   return (
