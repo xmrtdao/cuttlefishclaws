@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-*/
+dist-clean/
+dist-final/
+dist-fresh/
+dist-v*/
+.env
+.env.local
+*.log
+.DS_Store
+cuttlefish-protocol-main/
+final-server.cjs
+fresh-origin.cjs
+fresh-server.cjs
+package_backup.json

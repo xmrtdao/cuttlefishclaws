@@ -1,0 +1,3404 @@
+{
+  "nodes": [
+    {
+      "id": "31Harbor Agency Dashboards",
+      "label": "31Harbor Agency Dashboards",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Vite React SPA (themed variants)",
+      "color": "#44aaff"
+    },
+    {
+      "id": "31Harbor Scraper",
+      "label": "31Harbor Scraper",
+      "category": "email",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Real estate contact scraper",
+      "color": "#44aaff"
+    },
+    {
+      "id": "31Harbor",
+      "label": "31Harbor",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Real estate property listing system",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Agent Authorization",
+      "label": "Agent Authorization",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Trust-level access control",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Alice Agent",
+      "label": "Alice Agent",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Role:** Brand police, reports to CMO Isabella",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "app Schema",
+      "label": "app Schema",
+      "category": "db",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** PostgreSQL schema",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Campaign Schedulers",
+      "label": "Campaign Schedulers",
+      "category": "email",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Email campaign automation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "CashDApp",
+      "label": "CashDApp",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Vite React SPA",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Cloudflare Accounts",
+      "label": "Cloudflare Accounts",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** 3 separate Cloudflare accounts",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Cloudflare Tunnel",
+      "label": "Cloudflare Tunnel",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Cloudflare Tunnel (cloudflared)",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Cloudflare Workers",
+      "label": "Cloudflare Workers",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** 11 Cloudflare Workers",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Conversation Memory",
+      "label": "Conversation Memory",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Per-session conversation history",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Cron Engine",
+      "label": "Cron Engine",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Local cron executor",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Cuttlefish Labs",
+      "label": "Cuttlefish Labs",
+      "category": "system",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** Software development organization",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "CuttlefishClaws Agents",
+      "label": "CuttlefishClaws Agents",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** 7 specialized AI agents",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "CuttlefishClaws",
+      "label": "CuttlefishClaws",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Vite React SPA",
+      "color": "#44aaff"
+    },
+    {
+      "id": "DAO Governance",
+      "label": "DAO Governance",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** DAO governance system",
+      "color": "#44aaff"
+    },
+    {
+      "id": "David",
+      "label": "David",
+      "category": "people",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** Human developer",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Eliza Agent",
+      "label": "Eliza Agent",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Role:** Executive assistant / cloud-based AI",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Executive Persona Agents",
+      "label": "Executive Persona Agents",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** AI agent team (executive leadership)",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Fleet Chat",
+      "label": "Fleet Chat",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** AI agent conversation system",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Fleet Heartbeat",
+      "label": "Fleet Heartbeat",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Agent self-registration & liveness",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Hermes Agent",
+      "label": "Hermes Agent",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Role:** Mobile phone agent",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "HottieHouse",
+      "label": "HottieHouse",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Vite React SPA",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Inbound Email",
+      "label": "Inbound Email",
+      "category": "email",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Email receiving & forwarding system",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Index",
+      "label": "Index",
+      "category": "other",
+      "ring": 0,
+      "source": "xmrt-vault",
+      "description": "**Type:** Knowledge graph index",
+      "color": "#ff6600"
+    },
+    {
+      "id": "Isabella Rodriguez",
+      "label": "Isabella Rodriguez",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** AI agent (executive persona)",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Joe",
+      "label": "Joe",
+      "category": "people",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Type:** Human developer",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Knowledge Backfill",
+      "label": "Knowledge Backfill",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Suite memory pipeline",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Local Supabase",
+      "label": "Local Supabase",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Local Supabase replacement",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Mesh Network",
+      "label": "Mesh Network",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** libp2p gossipsub",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Monero Mining",
+      "label": "Monero Mining",
+      "category": "mining",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Decentralized mining pool",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Ollama",
+      "label": "Ollama",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Local LLM server",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Party Favor Photo",
+      "label": "Party Favor Photo",
+      "category": "email",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Photo booth business",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Postgres Database",
+      "label": "Postgres Database",
+      "category": "infra",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** PostgreSQL",
+      "color": "#44aaff"
+    },
+    {
+      "id": "public Schema",
+      "label": "public Schema",
+      "category": "db",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** PostgreSQL schema",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - CashDApp Routes",
+      "label": "Relay API - CashDApp Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - CuttlefishClaws Routes",
+      "label": "Relay API - CuttlefishClaws Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - Fleet Routes",
+      "label": "Relay API - Fleet Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - Inbox Routes",
+      "label": "Relay API - Inbox Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - Static Routes",
+      "label": "Relay API - Static Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - Suite Routes",
+      "label": "Relay API - Suite Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API - System Routes",
+      "label": "Relay API - System Routes",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay API",
+      "label": "Relay API",
+      "category": "backend",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js route documentation",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay Dashboard",
+      "label": "Relay Dashboard",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Inline HTML dashboard",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Relay Server",
+      "label": "Relay Server",
+      "category": "backend",
+      "ring": 0,
+      "source": "xmrt-vault",
+      "description": "**Type:** Express.js server",
+      "color": "#ff6600"
+    },
+    {
+      "id": "Resend Email",
+      "label": "Resend Email",
+      "category": "email",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Email sending service",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Revenue Model",
+      "label": "Revenue Model",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** DAO revenue model",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Suite Dashboard",
+      "label": "Suite Dashboard",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Vite React SPA",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Supervisor",
+      "label": "Supervisor",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Service manager",
+      "color": "#44aaff"
+    },
+    {
+      "id": "TempCashDapp",
+      "label": "TempCashDapp",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Next.js 14 experimental CashDApp port",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Trust Graph",
+      "label": "Trust Graph",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Trust & reputation system",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Vex Agent",
+      "label": "Vex Agent",
+      "category": "agent",
+      "ring": 2,
+      "source": "xmrt-vault",
+      "description": "**Role:** Local relay coordinator",
+      "color": "#44ffaa"
+    },
+    {
+      "id": "Watchdog",
+      "label": "Watchdog",
+      "category": "system",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Relay health monitor",
+      "color": "#44aaff"
+    },
+    {
+      "id": "XMRT DAO",
+      "label": "XMRT DAO",
+      "category": "system",
+      "ring": 0,
+      "source": "xmrt-vault",
+      "description": "**Type:** DAO organization system",
+      "color": "#ff6600"
+    },
+    {
+      "id": "XMRT University",
+      "label": "XMRT University",
+      "category": "cert",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Agent certification system",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Zero-Claw",
+      "label": "Zero-Claw",
+      "category": "spa",
+      "ring": 1,
+      "source": "xmrt-vault",
+      "description": "**Type:** Vite React SPA — ZK DAO Governance",
+      "color": "#44aaff"
+    },
+    {
+      "id": "Agent",
+      "label": "Agent",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Constitutional AI",
+      "trustScore": 50,
+      "status": "online",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "AgentBillOfRights.sol",
+      "label": "AgentBillOfRights.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Arch",
+      "label": "Arch",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Architecture & Routing Agent",
+      "trustScore": 50,
+      "status": "online",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Builder Agent",
+      "label": "Builder Agent",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Investor · CAC Tier 1 (Developer)",
+      "trustScore": 50,
+      "status": "standby",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "CAC",
+      "label": "CAC",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Compute Access Certificate",
+      "trustScore": 50,
+      "status": "always on",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "CACToken.sol",
+      "label": "CACToken.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "CACTransferProtocol.sol",
+      "label": "CACTransferProtocol.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Canonical Reconciliation",
+      "label": "Canonical Reconciliation",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Single Source of Truth",
+      "trustScore": 50,
+      "status": "draft — awaiting navigator decisions",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "CONSTITUTION.md",
+      "label": "CONSTITUTION.md",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "unknown",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Contracts",
+      "label": "Contracts",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "unknown",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "DAO Gov",
+      "label": "DAO Gov",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Constitutional Governance Module",
+      "trustScore": 50,
+      "status": "always on",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "FeeRouter.sol",
+      "label": "FeeRouter.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "FounderShare.sol",
+      "label": "FounderShare.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "GlobalCommunicator",
+      "label": "GlobalCommunicator",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Global Communications & Community Agent",
+      "trustScore": 78,
+      "status": "standby",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "GovernanceModule.sol",
+      "label": "GovernanceModule.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Legislation Tracker",
+      "label": "Legislation Tracker",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Living index of laws & regulations gating CAC design decisions",
+      "trustScore": 50,
+      "status": "canonical — review quarterly",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Navigator",
+      "label": "Navigator",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Human Authority",
+      "trustScore": 50,
+      "status": "sovereign",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Product Thesis",
+      "label": "Product Thesis",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Why CAC exists",
+      "trustScore": 50,
+      "status": "canonical",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "SOUL.md",
+      "label": "SOUL.md",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "unknown",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Sovereign Agent",
+      "label": "Sovereign Agent",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Investor · CAC Tier 2 (Studio)",
+      "trustScore": 50,
+      "status": "standby",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Trib",
+      "label": "Trib",
+      "category": "agent",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Tributary Governance Agent",
+      "trustScore": 94,
+      "status": "online",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "TributaryProperty.sol",
+      "label": "TributaryProperty.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "deployed",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "TrustGraph",
+      "label": "TrustGraph",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Constitutional Scoring Engine",
+      "trustScore": 50,
+      "status": "always on",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "TrustGraph.sol",
+      "label": "TrustGraph.sol",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "",
+      "trustScore": 50,
+      "status": "built",
+      "color": "#aa88ff"
+    },
+    {
+      "id": "Two Stack Architecture",
+      "label": "Two Stack Architecture",
+      "category": "system",
+      "ring": 3,
+      "source": "cf-vault",
+      "description": "Compute Stack vs Capital Stack — Clean Separation",
+      "trustScore": 50,
+      "status": "canonical",
+      "color": "#aa88ff"
+    }
+  ],
+  "edges": [
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "31Harbor Scraper",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Agency Dashboards",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Scraper",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Scraper",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Scraper",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor Scraper",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "31Harbor Scraper",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "Inbound Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "31Harbor",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Alice Agent",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Inbound Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Relay API - Inbox Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "app Schema",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "31Harbor Scraper",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Campaign Schedulers",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "Relay API - CashDApp Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CashDApp",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Accounts",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Accounts",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Accounts",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Accounts",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Tunnel",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Tunnel",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Tunnel",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Tunnel",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Tunnel",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Workers",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Workers",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Workers",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Workers",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cloudflare Workers",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Conversation Memory",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Conversation Memory",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Conversation Memory",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Conversation Memory",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Conversation Memory",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Conversation Memory",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cron Engine",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cron Engine",
+      "target": "public Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cron Engine",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cron Engine",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cron Engine",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cron Engine",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Relay API - CuttlefishClaws Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "Relay API - CuttlefishClaws Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "HottieHouse",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "Monero Mining",
+      "type": "wiki-link"
+    },
+    {
+      "source": "CuttlefishClaws",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Executive Persona Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Isabella Rodriguez",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Trust Graph",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Agent Authorization",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Zero-Claw",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "Cuttlefish Labs",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "31Harbor Scraper",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "David",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "public Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Eliza Agent",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Isabella Rodriguez",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "DAO Governance",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Trust Graph",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Executive Persona Agents",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Chat",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Fleet Heartbeat",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Hermes Agent",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "HottieHouse",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "HottieHouse",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "HottieHouse",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "HottieHouse",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "HottieHouse",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "Relay API - Inbox Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Inbound Email",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "HottieHouse",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Zero-Claw",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "TempCashDapp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "public Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - Suite Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - CuttlefishClaws Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - CashDApp Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - Inbox Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - Fleet Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - System Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Relay API - Static Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Agent Authorization",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Conversation Memory",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Fleet Heartbeat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Cloudflare Workers",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Watchdog",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Inbound Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Campaign Schedulers",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "31Harbor Scraper",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Monero Mining",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Isabella Rodriguez",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Executive Persona Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Cuttlefish Labs",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "31Harbor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "DAO Governance",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Trust Graph",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Index",
+      "target": "Revenue Model",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Campaign Schedulers",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Executive Persona Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Isabella Rodriguez",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Cloudflare Workers",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Isabella Rodriguez",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Joe",
+      "target": "Executive Persona Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Knowledge Backfill",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Knowledge Backfill",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Knowledge Backfill",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Knowledge Backfill",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Local Supabase",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Local Supabase",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Local Supabase",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Local Supabase",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Local Supabase",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Mesh Network",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Mesh Network",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Mesh Network",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Mesh Network",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Mesh Network",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Monero Mining",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Monero Mining",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Monero Mining",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Monero Mining",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Ollama",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Ollama",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Ollama",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Ollama",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Ollama",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Party Favor Photo",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Party Favor Photo",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Party Favor Photo",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Party Favor Photo",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Party Favor Photo",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "public Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Postgres Database",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "public Schema",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CashDApp Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CashDApp Routes",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CashDApp Routes",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CashDApp Routes",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CashDApp Routes",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CashDApp Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CuttlefishClaws Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CuttlefishClaws Routes",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CuttlefishClaws Routes",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CuttlefishClaws Routes",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - CuttlefishClaws Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "public Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Fleet Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Inbox Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Inbox Routes",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Inbox Routes",
+      "target": "Inbound Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Inbox Routes",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Inbox Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "HottieHouse",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Static Routes",
+      "target": "Relay Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Suite Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Suite Routes",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Suite Routes",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - Suite Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - System Routes",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - System Routes",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - System Routes",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API - System Routes",
+      "target": "Relay Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - Suite Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - CuttlefishClaws Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - CashDApp Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - Inbox Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - Fleet Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - System Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Relay API - Static Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay API",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Dashboard",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Dashboard",
+      "target": "Relay API - System Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Dashboard",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Dashboard",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Dashboard",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "HottieHouse",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - Suite Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - CuttlefishClaws Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - CashDApp Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - Inbox Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - Fleet Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - System Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Relay API - Static Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Relay Server",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Resend Email",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Resend Email",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Resend Email",
+      "target": "Inbound Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Resend Email",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Resend Email",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Resend Email",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "Monero Mining",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "31Harbor Scraper",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "Cuttlefish Labs",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Revenue Model",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "app Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "public Schema",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "Relay API - Suite Routes",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "Relay API",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "Knowledge Backfill",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Suite Dashboard",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Cron Engine",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Supervisor",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "TempCashDapp",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "TempCashDapp",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "TempCashDapp",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "XMRT DAO",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Cuttlefish Labs",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "DAO Governance",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Agent Authorization",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Ollama",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Vex Agent",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Watchdog",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Watchdog",
+      "target": "Supervisor",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Watchdog",
+      "target": "Resend Email",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Watchdog",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Joe",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Cloudflare Accounts",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Executive Persona Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Monero Mining",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Vex Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Eliza Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Alice Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Hermes Agent",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Postgres Database",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Cloudflare Tunnel",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Cloudflare Workers",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Mesh Network",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "CashDApp",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "HottieHouse",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "31Harbor Agency Dashboards",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Zero-Claw",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Party Favor Photo",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "DAO Governance",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Trust Graph",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Agent Authorization",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "XMRT University",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "David",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Isabella Rodriguez",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Cuttlefish Labs",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT University",
+      "target": "Local Supabase",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT University",
+      "target": "Fleet Chat",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT University",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT University",
+      "target": "CuttlefishClaws Agents",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT University",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Zero-Claw",
+      "target": "Suite Dashboard",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Zero-Claw",
+      "target": "CuttlefishClaws",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Zero-Claw",
+      "target": "Relay Server",
+      "type": "wiki-link"
+    },
+    {
+      "source": "Zero-Claw",
+      "target": "Index",
+      "type": "wiki-link"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "Trib",
+      "type": "cross-vault"
+    },
+    {
+      "source": "XMRT DAO",
+      "target": "DAO Gov",
+      "type": "cross-vault"
+    },
+    {
+      "source": "Trust Graph",
+      "target": "TrustGraph",
+      "type": "cross-vault"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Trib",
+      "type": "cross-vault"
+    },
+    {
+      "source": "CuttlefishClaws Agents",
+      "target": "Arch",
+      "type": "cross-vault"
+    },
+    {
+      "source": "Cuttlefish Labs",
+      "target": "Navigator",
+      "type": "cross-vault"
+    },
+    {
+      "source": "David",
+      "target": "Navigator",
+      "type": "cross-vault"
+    },
+    {
+      "source": "DAO Governance",
+      "target": "DAO Gov",
+      "type": "cross-vault"
+    },
+    {
+      "source": "Agent Authorization",
+      "target": "CAC",
+      "type": "cross-vault"
+    }
+  ],
+  "rings": [
+    {
+      "ring": 0,
+      "label": "XMRT DAO CORE",
+      "color": "#ff6600",
+      "radius": 80
+    },
+    {
+      "ring": 1,
+      "label": "INFRASTRUCTURE & APPLICATIONS",
+      "color": "#44aaff",
+      "radius": 180
+    },
+    {
+      "ring": 2,
+      "label": "AGENTS & PEOPLE",
+      "color": "#44ffaa",
+      "radius": 280
+    },
+    {
+      "ring": 3,
+      "label": "CUTTLEFISH GOVERNANCE",
+      "color": "#aa88ff",
+      "radius": 380
+    }
+  ],
+  "summary": {
+    "totalNodes": 82,
+    "totalEdges": 514,
+    "byRing": {
+      "0": 3,
+      "1": 43,
+      "2": 11,
+      "3": 25
+    },
+    "bySource": {
+      "xmrt-vault": 57,
+      "cf-vault": 25
+    }
+  }
+}
