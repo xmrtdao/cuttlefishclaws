@@ -480,7 +480,16 @@ export default function TrustGraphSection() {
 
   // ── Fetch real trust events from the database ──
   useEffect(() => {
-    const agentIds = ['trib', 'arch', 'builder', 'sovereign', 'trustgraph', 'dao', 'global-communicator']
+    const agentDIDs: Record<string, string> = {
+      'trib': 'did:ethr:trib-v3',
+      'arch': 'did:ethr:arch-v1',
+      'builder': 'did:ethr:builder-v1',
+      'sovereign': 'did:ethr:sovereign-v1',
+      'trustgraph': 'did:ethr:trustgraph-v1',
+      'dao': 'did:ethr:dao-gov-v1',
+      'global-communicator': 'did:ethr:global-communicator-v1',
+    }
+    const agentIds = Object.keys(agentDIDs)
     const AGENT_ID_MAP: Record<string, string> = {
       'trib': 'trib', 'arch': 'arch', 'builder': 'builder-agent',
       'sovereign': 'sovereign-agent', 'trustgraph': 'trustgraph',
@@ -496,7 +505,7 @@ export default function TrustGraphSection() {
       try {
         const results = await Promise.all(
           agentIds.map(id =>
-            fetch(`https://relay.mobilemonero.com/api/cuttlefishclaws/trust-score?agentId=${id}`)
+            fetch(`/api/cuttlefishclaws/trust-score?did=${agentDIDs[id]}`)
               .then(r => r.ok ? r.json() : null)
               .catch(() => null)
           )

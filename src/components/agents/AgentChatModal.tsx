@@ -49,7 +49,7 @@ export default function AgentChatModal({ agentId, onClose }: Props) {
     setIsTyping(true)
 
     try {
-      const res = await fetch('https://relay.mobilemonero.com/api/contact/cuttlefishclaws/chat', {
+      const res = await fetch('/api/contact/cuttlefishclaws/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ agentId: agentId, message: userMessage.content }),

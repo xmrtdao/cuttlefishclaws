@@ -1,5 +1,5 @@
-// All calls to relay API
-const RELAY = 'https://relay.mobilemonero.com/api/cuttlefishclaws'
+// All calls to relay API — same-origin so it works from any subdomain or localhost
+const RELAY = '/api/cuttlefishclaws'
 
 async function post<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`${RELAY}/${path}`, {

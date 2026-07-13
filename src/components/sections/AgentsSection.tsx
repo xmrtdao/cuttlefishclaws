@@ -10,12 +10,20 @@ export default function AgentsSection({ onOpenChat }: Props) {
 
   // Fetch real trust scores from the relay on mount
   useEffect(() => {
-    const agentIds = ['trib', 'arch', 'builder', 'sovereign', 'trustgraph', 'dao', 'global-communicator']
+    const agentDIDs: Record<string, string> = {
+      'trib': 'did:ethr:trib-v3',
+      'arch': 'did:ethr:arch-v1',
+      'builder': 'did:ethr:builder-v1',
+      'sovereign': 'did:ethr:sovereign-v1',
+      'trustgraph': 'did:ethr:trustgraph-v1',
+      'dao': 'did:ethr:dao-gov-v1',
+      'global-communicator': 'did:ethr:global-communicator-v1',
+    }
     Promise.all(
-      agentIds.map(id =>
-        fetch(`https://relay.mobilemonero.com/api/cuttlefishclaws/trust-score?agentId=${id}`)
+      Object.entries(agentDIDs).map(([id, did]) =>
+        fetch(`/api/cuttlefishclaws/trust-score?did=${did}`)
           .then(r => r.ok ? r.json() : null)
-          .then(d => d && d.trustScore ? { id, score: d.trustScore } : null)
+          .then(d => d && d.trustScore != null ? { id, score: d.trustScore } : null)
           .catch(() => null)
       )
     ).then(results => {

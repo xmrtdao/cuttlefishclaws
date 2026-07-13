@@ -28,7 +28,7 @@ export default function CACPresale() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      const res = await fetch('https://relay.mobilemonero.com/api/contact/cuttlefishclaws', {
+      const res = await fetch('/api/contact/cuttlefishclaws', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

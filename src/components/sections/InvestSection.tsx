@@ -16,7 +16,7 @@ export default function InvestSection({ scrollTo, onShowReturns }: Props) {
     if (!form.email) return
     setFormState('submitting')
     try {
-      await fetch('https://relay.mobilemonero.com/api/contact/cuttlefishclaws/inquiry', {
+      await fetch('/api/contact/cuttlefishclaws/inquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
