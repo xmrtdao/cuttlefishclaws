@@ -3,307 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tributary AI Campus — Constitutional Governance DAO-REIT</title>
+  <title>Tributary AI Campus - Constitutional Governance DAO-REIT</title>
   <meta name="description" content="Where AI agents own physical infrastructure. 420,460 SF former AT&T operations center governed by constitutional DAO-REIT in Birmingham, AL.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
+    /* ── Login Widget Overlay ── */
+    #login-overlay {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
       font-family: 'Rajdhani', sans-serif;
-      background: #0a0b0e;
-      color: #c8d0e0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-x: hidden;
     }
-    .scanlines {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,200,0.015) 2px, rgba(0,255,200,0.015) 4px);
-    }
-    .bg-glow {
-      position: fixed; inset: 0; z-index: -1; pointer-events: none;
-      background: radial-gradient(ellipse 60% 50% at 50% 30%, rgba(0,200,255,0.06), transparent 70%),
-                  radial-gradient(ellipse 40% 40% at 80% 70%, rgba(0,255,150,0.04), transparent 60%);
-    }
-    .container {
-      position: relative; z-index: 1;
-      max-width: 600px; width: 100%; padding: 40px 20px;
-      display: flex; flex-direction: column; align-items: center;
-      min-height: 100vh;
-    }
-
-    /* ── Top Bar ── */
-    .top-bar {
-      width: 100%; display: flex; align-items: center; justify-content: space-between;
-      padding: 8px 0; margin-bottom: 40px;
-      border-bottom: 1px solid rgba(0,255,200,0.1);
-    }
-    .top-bar .brand {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 11px; color: rgba(0,255,200,0.5);
-      letter-spacing: 0.15em; text-transform: uppercase;
-    }
-    .top-bar .live {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 10px; color: rgba(0,255,200,0.4);
-      letter-spacing: 0.1em;
-    }
-    .top-bar .live::before {
-      content: '⊙ '; color: #00ff88;
-    }
-
-    /* ── Hero ── */
-    .hero { text-align: center; margin-bottom: 32px; }
-    .hero .badge {
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 10px; color: rgba(0,255,200,0.5);
-      letter-spacing: 0.2em; text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .hero h1 {
-      font-size: 42px; font-weight: 700; color: #e8f0ff;
-      line-height: 1.1; margin-bottom: 8px;
-    }
-    .hero h1 .accent {
+    #login-toggle {
+      width: 48px; height: 48px; border-radius: 50%;
       background: linear-gradient(135deg, #00ffc8, #00aaff);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
+      border: none; cursor: pointer; font-size: 20px;
+      box-shadow: 0 4px 20px rgba(0,255,200,0.3);
+      transition: all 0.2s; display: flex; align-items: center; justify-content: center;
     }
-    .hero .sub {
-      font-size: 15px; color: #6a7a8a; font-weight: 400;
-      max-width: 480px; margin: 0 auto;
+    #login-toggle:hover { transform: scale(1.1); box-shadow: 0 4px 30px rgba(0,255,200,0.5); }
+    #login-panel {
+      display: none;
+      position: absolute; bottom: 56px; right: 0;
+      width: 320px; background: #0d0e12;
+      border: 1px solid rgba(0,255,200,0.15); border-radius: 12px;
+      padding: 20px; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
     }
-
-    /* ── Stats ── */
-    .stats {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
-      width: 100%; margin-bottom: 32px;
-    }
-    .stat {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(0,255,200,0.08);
-      border-radius: 8px; padding: 16px 12px; text-align: center;
-    }
-    .stat-value {
-      font-size: 22px; font-weight: 700; color: #00ffc8;
-      font-family: 'Share Tech Mono', monospace;
-    }
-    .stat-label {
-      font-size: 11px; color: #5a6a7a; margin-top: 2px;
-      letter-spacing: 0.05em; text-transform: uppercase;
-    }
-
-    /* ── Auth Card ── */
-    .auth-card {
-      width: 100%;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(0,255,200,0.1);
-      border-radius: 12px; padding: 32px;
-      margin-bottom: 20px;
-    }
-    .auth-card h2 {
-      font-size: 16px; font-weight: 600; color: #a0b0c0;
+    #login-panel.open { display: block; }
+    #login-panel h3 {
+      font-size: 13px; font-weight: 600; color: #a0b0c0;
       text-align: center; margin-bottom: 4px;
-      letter-spacing: 0.05em; text-transform: uppercase;
+      letter-spacing: 0.08em; text-transform: uppercase;
     }
-    .auth-card .hint {
-      font-size: 13px; color: #5a6a7a; text-align: center;
-      margin-bottom: 24px;
+    #login-panel .hint {
+      font-size: 11px; color: #5a6a7a; text-align: center;
+      margin-bottom: 16px;
     }
-    .form-group { margin-bottom: 16px; }
-    .form-group label {
-      display: block; font-size: 11px; font-weight: 600; color: #7a8a9a;
-      margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.08em;
+    #login-panel .field { margin-bottom: 12px; }
+    #login-panel .field label {
+      display: block; font-size: 10px; font-weight: 600; color: #7a8a9a;
+      margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.08em;
     }
-    .form-group input {
-      width: 100%; padding: 10px 14px;
+    #login-panel .field input {
+      width: 100%; padding: 8px 12px;
       background: rgba(0,0,0,0.3); border: 1px solid rgba(0,255,200,0.15);
-      border-radius: 6px; color: #c8d0e0; font-size: 13px;
-      font-family: 'Share Tech Mono', monospace;
-      outline: none; transition: border-color 0.2s;
+      border-radius: 6px; color: #c8d0e0; font-size: 12px;
+      font-family: 'Share Tech Mono', monospace; outline: none;
     }
-    .form-group input:focus { border-color: #00ffc8; box-shadow: 0 0 12px rgba(0,255,200,0.1); }
-    .form-group input::placeholder { color: #3a4a5a; }
-
-    .btn-primary {
-      width: 100%; padding: 12px; border: none; border-radius: 6px;
+    #login-panel .field input:focus { border-color: #00ffc8; }
+    #login-panel .btn {
+      width: 100%; padding: 10px; border: none; border-radius: 6px;
       background: linear-gradient(135deg, #00ffc8, #00aaff);
-      color: #0a0b0e; font-size: 14px; font-weight: 700;
+      color: #0a0b0e; font-size: 13px; font-weight: 700;
+      cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em;
       font-family: 'Rajdhani', sans-serif;
-      cursor: pointer; transition: all 0.2s; text-transform: uppercase;
-      letter-spacing: 0.1em; margin-top: 8px;
     }
-    .btn-primary:hover { opacity: 0.9; box-shadow: 0 0 20px rgba(0,255,200,0.2); }
-    .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
-
-    .btn-outline {
-      width: 100%; padding: 12px; border: 1px solid rgba(0,255,200,0.2);
-      border-radius: 6px; background: transparent;
-      color: #00ffc8; font-size: 14px; font-weight: 600;
-      font-family: 'Rajdhani', sans-serif;
-      cursor: pointer; transition: all 0.2s; text-transform: uppercase;
-      letter-spacing: 0.1em; margin-top: 8px;
+    #login-panel .btn:hover { opacity: 0.9; }
+    #login-panel .status {
+      margin-top: 8px; padding: 6px 10px; border-radius: 4px;
+      font-size: 11px; display: none; font-family: 'Share Tech Mono', monospace;
     }
-    .btn-outline:hover { border-color: #00ffc8; background: rgba(0,255,200,0.05); }
-
-    .status {
-      margin-top: 12px; padding: 10px 14px; border-radius: 6px;
-      font-size: 12px; display: none; font-family: 'Share Tech Mono', monospace;
-    }
-    .status.error { display: block; background: rgba(255,68,68,0.08); border: 1px solid rgba(255,68,68,0.2); color: #ff4444; }
-    .status.success { display: block; background: rgba(0,255,200,0.08); border: 1px solid rgba(0,255,200,0.2); color: #00ffc8; }
-    .status.info { display: block; background: rgba(0,170,255,0.08); border: 1px solid rgba(0,170,255,0.2); color: #00aaff; }
-
-    .divider {
-      display: flex; align-items: center; gap: 12px; margin: 20px 0;
-      color: #3a4a5a; font-size: 11px;
-    }
-    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: rgba(0,255,200,0.08); }
-
-    .local-link {
-      text-align: center; font-size: 12px; color: #5a6a7a; line-height: 1.6;
-    }
-    .local-link strong { color: #a0b0c0; }
-    .local-link a { color: #00aaff; text-decoration: none; }
-    .local-link a:hover { text-decoration: underline; }
-
-    .spinner {
-      display: inline-block; width: 14px; height: 14px;
-      border: 2px solid rgba(10,11,14,0.3); border-top-color: #0a0b0e;
-      border-radius: 50%; animation: spin 0.6s linear infinite;
-      vertical-align: middle; margin-right: 6px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── Footer ── */
-    footer {
-      margin-top: auto; padding: 24px 0 16px;
-      text-align: center; font-size: 11px; color: #3a4a5a;
-      font-family: 'Share Tech Mono', monospace;
-    }
-    footer a { color: #5a6a7a; text-decoration: none; }
-    footer a:hover { color: #00ffc8; }
-    footer .sep { margin: 0 8px; color: #2a3a4a; }
-
-    @media (max-width: 400px) {
-      .container { padding: 24px 16px; }
-      .auth-card { padding: 24px; }
-      .hero h1 { font-size: 32px; }
-      .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .stat { padding: 12px 8px; }
-      .stat-value { font-size: 18px; }
-    }
+    #login-panel .status.error { display: block; background: rgba(255,68,68,0.08); border: 1px solid rgba(255,68,68,0.2); color: #ff4444; }
   </style>
 </head>
 <body>
-  <div class="scanlines"></div>
-  <div class="bg-glow"></div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 
-  <div class="container">
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <span class="brand">⟡ Tributary Campus</span>
-      <span class="live">LIVE · BIRMINGHAM, AL</span>
+  <!-- Login Widget -->
+  <div id="login-overlay">
+    <div id="login-panel">
+      <h3>🔐 Navigator Access</h3>
+      <p class="hint">Sign in to access governance & agent chat</p>
+      <div class="field">
+        <label>API Key</label>
+        <input type="text" id="cf-api-key" placeholder="cuttlefish-api-key-..." autocomplete="off" spellcheck="false" />
+      </div>
+      <div class="field">
+        <label>JWT Token</label>
+        <input type="password" id="cf-jwt" placeholder="eyJhbGciOiJSUzI1NiIs..." autocomplete="off" />
+      </div>
+      <button class="btn" id="cf-login-btn">Sign in as Navigator</button>
+      <div class="status" id="cf-status"></div>
     </div>
-
-    <!-- Hero -->
-    <div class="hero">
-      <div class="badge">Constitutional DAO-REIT</div>
-      <h1>Tributary AI <span class="accent">Campus</span></h1>
-      <p class="sub">420,460 SF — where AI agents own physical infrastructure. Constitutional governance on-chain.</p>
-    </div>
-
-    <!-- Stats -->
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-value">$8.32</div>
-        <div class="stat-label">Per Sq Ft</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value">420K</div>
-        <div class="stat-label">Rentable SF</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value">$250M+</div>
-        <div class="stat-label">2030 Target</div>
-      </div>
-    </div>
-
-    <!-- Auth Card -->
-    <div class="auth-card">
-      <h2>🔐 Navigator Access</h2>
-      <p class="hint">Sign in to access the governance portal, agent chat, and capital stack.</p>
-
-      <div class="form-group">
-        <label for="apiKey">API Key</label>
-        <input type="text" id="apiKey" placeholder="cuttlefish-api-key-..." autocomplete="off" spellcheck="false" />
-      </div>
-      <div class="form-group">
-        <label for="jwt">JWT Token</label>
-        <input type="password" id="jwt" placeholder="eyJhbGciOiJSUzI1NiIs..." autocomplete="off" />
-      </div>
-
-      <button class="btn-primary" id="loginBtn" onclick="handleLogin()">Sign in as Navigator</button>
-      <div class="status" id="status"></div>
-
-      <div class="divider">or</div>
-
-      <p class="local-link">
-        Access locally at<br />
-        <strong>http://localhost:8080/cuttlefishclaws/</strong>
-      </p>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-      <a href="https://xmrtdao.github.io/cuttlefishclaws/">Tributary Campus</a>
-      <span class="sep">//</span>
-      <a href="https://github.com/xmrtdao/cuttlefishclaws" target="_blank">GitHub</a>
-      <span class="sep">//</span>
-      <a href="https://cuttlefishlabs.io" target="_blank">Cuttlefish Labs</a>
-    </footer>
+    <button id="login-toggle" title="Sign in">⟡</button>
   </div>
 
   <script>
-    function buildDashboardUrl(apiKey, jwt) {
-      const params = new URLSearchParams();
-      if (apiKey) params.set('api_key', apiKey);
-      if (jwt) params.set('jwt', jwt);
-      const qs = params.toString();
-      return 'https://relay.mobilemonero.com/cuttlefishclaws/' + (qs ? '?' + qs : '');
-    }
+    const toggle = document.getElementById('login-toggle');
+    const panel = document.getElementById('login-panel');
+    toggle.addEventListener('click', () => panel.classList.toggle('open'));
 
-    function handleLogin() {
-      const apiKey = document.getElementById('apiKey').value.trim();
-      const jwt = document.getElementById('jwt').value.trim();
-      const status = document.getElementById('status');
-
+    document.getElementById('cf-login-btn').addEventListener('click', () => {
+      const apiKey = document.getElementById('cf-api-key').value.trim();
+      const jwt = document.getElementById('cf-jwt').value.trim();
+      const status = document.getElementById('cf-status');
       status.className = 'status';
       status.style.display = 'none';
-
       if (!apiKey && !jwt) {
         status.className = 'status error';
-        status.textContent = '> ERROR: API key or JWT required.';
+        status.textContent = '> API key or JWT required.';
         status.style.display = 'block';
         return;
       }
+      const params = new URLSearchParams();
+      if (apiKey) params.set('api_key', apiKey);
+      if (jwt) params.set('jwt', jwt);
+      window.location.href = 'https://relay.mobilemonero.com/cuttlefishclaws/' + (params.toString() ? '?' + params.toString() : '');
+    });
 
-      try {
-        sessionStorage.setItem('cuttlefish_api_key', apiKey);
-        sessionStorage.setItem('cuttlefish_jwt', jwt);
-      } catch(e) {}
-
-      window.location.href = buildDashboardUrl(apiKey, jwt);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('keydown', (e) => { if (e.key === 'Enter') handleLogin(); });
-      });
+    document.querySelectorAll('#login-panel input').forEach(input => {
+      input.addEventListener('keydown', (e) => { if (e.key === 'Enter') document.getElementById('cf-login-btn').click(); });
     });
   </script>
 </body>
