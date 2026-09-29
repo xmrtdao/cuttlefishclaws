@@ -14,3 +14,10 @@ next.user-config.*
 node_modules/
 .next/
 .DS_Store
+
+# The relay server lives at xmrtdao/mobilemonero, where the canonical 16,184-line
+# copy is committed. The copy that sat here was a 3,490-line / 409KB partial of it,
+# roughly half the running 807KB, and no reviewer reading this branch could tell that
+# from the real thing. Untracked rather than deleted: the working copy is what the
+# supervisor actually runs, and it must keep working.
+relay/server.js
